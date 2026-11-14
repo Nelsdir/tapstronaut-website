@@ -2,48 +2,70 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#080c22">
-<meta name="description" content="TAPSTRONAUT is a free one-touch space arcade game. Dodge asteroids, master Boost mode and compete in Arcade and Daily Challenge on iPhone and iPad.">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050913">
+<meta name="description" content="TAPSTRONAUT — one tap, endless space. Watch real gameplay, then download free on the App Store or Google Play.">
 <meta property="og:title" content="TAPSTRONAUT — One tap. Endless space.">
-<meta property="og:description" content="Dodge the storm. Master the Boost. Chase the leaderboard. Play free on iPhone and iPad.">
+<meta property="og:description" content="Dodge asteroids. Chase your high score. Play free on iOS and Android.">
 <meta property="og:type" content="website">
 <title>TAPSTRONAUT — One tap. Endless space.</title>
 <style>
-:root{color-scheme:dark;--ink:#f5f6ff;--muted:#b3c0db;--pink:#ff4da0;--cyan:#69eaff;--bg:#080c22}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 20% 15%,#293b7b66,transparent 36%),radial-gradient(circle at 85% 70%,#69266d55,transparent 40%),radial-gradient(2px 2px at 10% 20%,#fff 98%,transparent),radial-gradient(2px 2px at 76% 28%,#fff 98%,transparent),radial-gradient(1px 1px at 40% 78%,#fff 98%,transparent),radial-gradient(2px 2px at 90% 88%,#fff 98%,transparent)}
-a{color:inherit}.wrap{width:min(1100px,calc(100% - 36px));margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:18px}.brand{font-weight:950;letter-spacing:.11em;font-size:clamp(1rem,3vw,1.35rem)}.brand span{color:var(--cyan)}.nav a{font-size:.9rem;text-decoration:none;color:var(--muted)}.nav a:hover{color:white}
-.hero{min-height:610px;display:grid;place-items:center;text-align:center;padding:74px 0 85px}.eyebrow{color:var(--cyan);font-size:.8rem;letter-spacing:.25em;font-weight:800;text-transform:uppercase}.hero h1{font-size:clamp(3.2rem,10vw,7.5rem);line-height:1;letter-spacing:-.06em;margin:18px 0 8px;text-shadow:0 8px 0 #25275a,0 0 40px #7c58ff55}.hero h1 span{color:var(--pink)}.hero h2{font-size:clamp(1.3rem,3vw,2rem);font-weight:650;margin:18px 0 10px}.lead{max-width:620px;color:var(--muted);font-size:1.12rem;margin:0 auto 32px}.button{display:inline-block;text-decoration:none;border-radius:14px;padding:15px 26px;font-weight:850;background:linear-gradient(115deg,var(--pink),#b96aff);color:#140b27;box-shadow:0 8px 35px #ff4da055;transition:transform .2s}.button:hover{transform:translateY(-3px)}.note{font-size:.86rem;color:var(--muted);margin-top:18px}.orb{font-size:4rem;filter:drop-shadow(0 0 22px #69eaff99);margin:18px 0}
-section.features{padding:28px 0 100px}.section-title{text-align:center;font-size:clamp(1.8rem,4vw,2.7rem);margin:0 0 30px}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{border:1px solid #6877bb55;background:#141b3bd9;border-radius:20px;padding:28px}.card .emoji{font-size:2.1rem}.card h3{font-size:1.2rem;margin:14px 0 6px}.card p{color:var(--muted);margin:0}.cta{text-align:center;border:1px solid #7281ce55;border-radius:25px;padding:45px 22px;background:linear-gradient(120deg,#22275a,#321b4d);margin-bottom:70px}.cta h2{margin:0 0 8px;font-size:2rem}.cta p{color:var(--muted);margin:0 0 25px}footer{border-top:1px solid #ffffff22;padding:26px 0;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}footer a{color:var(--cyan)}
-@media(max-width:700px){.cards{grid-template-columns:1fr}.hero{min-height:540px;padding:45px 0 60px}.card{padding:23px}.brand{letter-spacing:.05em}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+*{box-sizing:border-box}
+:root{color-scheme:dark;--cyan:#00f4ff}
+html,body{margin:0;min-height:100%;background:#030712}
+body{min-height:100vh;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 42%,#0d1940 0,#030712 68%);color:#fff;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{width:min(100vw,768px);margin:auto}
+.mockup{position:relative;width:100%;aspect-ratio:2/3;isolation:isolate;overflow:hidden;background:#020715}
+.art{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.video-frame{position:absolute;z-index:2;left:20.6%;top:40.6%;width:58.8%;height:26.1%;overflow:hidden;border-radius:5%;background:#05070c}
+video{display:block;width:100%;height:100%;object-fit:cover;object-position:center 55%;background:#05070c}
+.play{position:absolute;z-index:3;left:50%;top:50%;transform:translate(-50%,-50%);width:13.5%;aspect-ratio:1;border:3px solid #fff;border-radius:50%;background:#0008;display:grid;place-items:center;padding:0;cursor:pointer;box-shadow:0 2px 14px #0009}
+.play::before{content:"";width:0;height:0;margin-left:7%;border-top:clamp(10px,2.3vw,20px) solid transparent;border-bottom:clamp(10px,2.3vw,20px) solid transparent;border-left:clamp(16px,3.4vw,29px) solid #fff}
+.play:hover{background:#000b;transform:translate(-50%,-50%) scale(1.05)}
+.play:focus-visible,.hit:focus-visible{outline:3px solid #ffe243;outline-offset:3px}
+.play[hidden]{display:none}
+.hit{position:absolute;z-index:4;display:block;border-radius:999px}
+.hit:focus-visible{box-shadow:0 0 0 4px #ffe243}
+.apple{left:7.6%;top:72.8%;width:40.3%;height:7.8%}
+.google{left:52.1%;top:72.8%;width:40.4%;height:7.8%}
+.facebook{left:5.7%;top:84.7%;width:29.2%;height:5.6%}
+.instagram{left:36%;top:84.7%;width:29.3%;height:5.6%}
+.tiktok{left:66.1%;top:84.7%;width:28.7%;height:5.6%}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:480px){.play{border-width:2px}}
+@media(prefers-reduced-motion:reduce){.play:hover{transform:translate(-50%,-50%)}}
 </style>
 </head>
 <body>
-<header class="wrap nav"><div class="brand">TAP<span>STRONAUT</span></div><a href="#features">Explore the game</a></header>
 <main>
-<div class="wrap hero">
-<div>
-<div class="eyebrow">The one-touch space survival game</div>
-<div class="orb" aria-hidden="true">🚀</div>
-<h1>TAP<span>STRONAUT</span></h1>
-<h2>One tap. Endless space.</h2>
-<p class="lead">Dodge asteroid storms. Risk razor-close passes. Unleash Boost mode. Chase your high score or race the clock in the Daily Challenge.</p>
-<a class="button" href="https://apps.apple.com/app/tapstronaut/id6802784394" rel="noopener">Download free on the App Store</a>
-<p class="note">Free to play · iPhone &amp; iPad · iOS 15 or later</p>
+<section class="mockup" aria-label="TAPSTRONAUT game and download links">
+<h1 class="sr-only">TAPSTRONAUT — One tap. Endless space.</h1>
+<img class="art" src="assets/landing-mockup.webp" alt="TAPSTRONAUT pixel-art landing page with gameplay preview and App Store, Google Play, Facebook, Instagram and TikTok buttons">
+<div class="video-frame">
+<video id="gameplay" playsinline preload="none" poster="assets/gameplay-poster.webp" aria-label="TAPSTRONAUT gameplay video with sound">
+<source src="assets/tapstronaut-gameplay.mp4" type="video/mp4">
+</video>
+<button class="play" id="play" type="button" aria-label="Play TAPSTRONAUT gameplay with sound" aria-controls="gameplay"></button>
 </div>
-</div>
-<section class="features wrap" id="features" aria-labelledby="features-heading">
-<h2 class="section-title" id="features-heading">Small controls. Big challenge.</h2>
-<div class="cards">
-<article class="card"><div class="emoji" aria-hidden="true">☄️</div><h3>Arcade mode</h3><p>Weave through unpredictable asteroid fields and survive as long as you can. Every run is a new chance to beat your best.</p></article>
-<article class="card"><div class="emoji" aria-hidden="true">⏱️</div><h3>Daily Challenge</h3><p>Race through a 120-asteroid course. Find the perfect line and compete for the fastest time.</p></article>
-<article class="card"><div class="emoji" aria-hidden="true">⚡</div><h3>Close passes &amp; Boost</h3><p>Take calculated risks for bonuses, collect boosters and smash through asteroids while your shield is active.</p></article>
-</div>
+<a class="hit apple" href="https://apps.apple.com/gb/app/tapstronaut/id6802784394" aria-label="Download TAPSTRONAUT from the App Store"></a>
+<a class="hit google" href="https://play.google.com/store/apps/details?id=com.nelsdir.tapstronaut" aria-label="Get TAPSTRONAUT on Google Play"></a>
+<a class="hit facebook" href="https://www.facebook.com/Tapstronaut/" target="_blank" rel="noopener noreferrer" aria-label="Visit TAPSTRONAUT on Facebook"></a>
+<a class="hit instagram" href="https://www.instagram.com/tapstronaut/" target="_blank" rel="noopener noreferrer" aria-label="Visit TAPSTRONAUT on Instagram"></a>
+<a class="hit tiktok" href="https://www.tiktok.com/@tapstronaut" target="_blank" rel="noopener noreferrer" aria-label="Visit TAPSTRONAUT on TikTok"></a>
 </section>
-<div class="wrap"><section class="cta"><h2>Ready for launch?</h2><p>Dodge the storm. Master the Boost. Climb the leaderboard.</p><a class="button" href="https://apps.apple.com/app/tapstronaut/id6802784394" rel="noopener">Play TAPSTRONAUT free</a></section></div>
+<p class="sr-only">The gameplay video plays with sound after you press play. Use the video controls to pause or adjust the volume.</p>
 </main>
-<footer class="wrap"><span>© 2026 Nels Dir Games · TAPSTRONAUT</span><span>Made for one more run.</span></footer>
+<script>
+const video=document.getElementById("gameplay");
+const playButton=document.getElementById("play");
+playButton.addEventListener("click",async()=>{
+  video.controls=true;
+  if(video.ended) video.currentTime=0;
+  try{await video.play();}catch(error){playButton.hidden=false;}
+});
+video.addEventListener("play",()=>{playButton.hidden=true;});
+video.addEventListener("pause",()=>{if(!video.ended)playButton.hidden=false;});
+video.addEventListener("ended",()=>{playButton.hidden=false;});
+</script>
 </body>
 </html>
